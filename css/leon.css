@@ -1,6 +1,7 @@
 /* Variables Start */
 :root {
-  --mainColor: #10cab7;
+  --main-color: #10cab7;
+  --main-padding: 60px;
 }
 /* Variables End */
 /* Global Rules Start */
@@ -135,7 +136,7 @@ header ul li:not(:last-child) a {
   max-width: 100%;
 }
 .landing .intro-text h1 {
-  color: var(--mainColor);
+  color: var(--main-color);
   margin: 0;
   font-weight: bold;
   font-size: 50px;
@@ -145,3 +146,31 @@ header ul li:not(:last-child) a {
   line-height: 1.8;
 }
 /* Landing End */
+/* Features Start */
+.features {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: #f6f6f6;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.features .feat {
+  padding: 20px;
+  text-align: center;
+}
+.features .feat i {
+  color: var(--main-color);
+}
+.features .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .feat p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
+}
+/* Features End */
