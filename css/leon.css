@@ -4,9 +4,18 @@
   --secondary-color: #2c4755;
   --main-padding: 60px;
   --section-background: #f6f6f6;
+  --main-transition: 0.3s;
 }
 /* Variables End */
 /* Components Start */
+.flex-with-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 .special-header {
   color: #ebeced;
   font-size: 100px;
@@ -86,8 +95,6 @@ header .links:hover .icon span:nth-child(2) {
 }
 header .links .icon {
   width: 30px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
 }
 header .links .icon span {
@@ -100,7 +107,7 @@ header .links .icon span:first-child {
 }
 header .links .icon span:nth-child(2) {
   width: 60%;
-  transition: 0.3s;
+  transition: var(--main-transition);
 }
 header .links .icon span:last-child {
   width: 100%;
@@ -135,7 +142,7 @@ header ul li a {
   padding: 15px;
   text-decoration: none;
   color: #333;
-  transition: 0.3s;
+  transition: var(--main-transition);
 }
 header ul li a:hover {
   padding-left: 25px;
@@ -180,8 +187,6 @@ header ul li:not(:last-child) a {
   background-color: var(--section-background);
 }
 .features .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 .features .feat {
@@ -207,15 +212,11 @@ header ul li:not(:last-child) a {
   padding-bottom: var(--main-padding);
 }
 .services .service {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 100px;
 }
 .services .srv {
-  display: flex;
   margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   .services .srv {
@@ -269,8 +270,6 @@ header ul li:not(:last-child) a {
 }
 .portfolio .port-content {
   margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 .portfolio .project {
@@ -296,8 +295,6 @@ header ul li:not(:last-child) a {
   padding-bottom: calc(var(--main-padding) + 60px);
 }
 .about .about-content {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 100px;
 }
