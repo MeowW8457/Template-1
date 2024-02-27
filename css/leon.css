@@ -3,6 +3,7 @@
   --main-color: #10cab7;
   --secondary-color: #2c4755;
   --main-padding: 60px;
+  --section-background: #f6f6f6;
 }
 /* Variables End */
 /* Components Start */
@@ -173,7 +174,7 @@ header ul li:not(:last-child) a {
 .features {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
-  background-color: #f6f6f6;
+  background-color: var(--section-background);
 }
 .features .container {
   display: grid;
@@ -257,3 +258,90 @@ header ul li:not(:last-child) a {
   }
 }
 /* Services End */
+/* Portfolio Start */
+.portfolio {
+  background-color: var(--section-background);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.portfolio .port-content {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.portfolio .project {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.portfolio .project .proj-text {
+  padding: 20px;
+}
+.portfolio .project h3 {
+  margin: 0;
+}
+.portfolio .project p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/* Portfolio End */
+/* About Start */
+.about {
+  padding-top: var(--main-padding);
+  padding-bottom: calc(var(--main-padding) + 60px);
+}
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.about .about-content .about-image {
+  width: 250px;
+  height: 375px;
+  position: relative;
+}
+.about .about-content .about-image::before {
+  content: "";
+  width: 100px;
+  height: calc(100% + 80px);
+  background-color: #ebeced;
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.about .about-content .about-image::after {
+  content: "";
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  position: absolute;
+  top: -40px;
+  left: 200px;
+  z-index: -1;
+}
+.about .about-content .about-image img {
+  width: 100%;
+}
+.about .about-content .about-text {
+  flex-basis: calc(100% - 500px);
+}
+.about .about-content .about-text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .about-content .about-text hr {
+  display: inline-block;
+  border-color: var(--main-color);
+  width: 50%;
+}
+.about .about-content .about-text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+/* About End */
