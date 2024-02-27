@@ -75,7 +75,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-header .logo {
+header img {
   width: 60px;
 }
 header .links {
@@ -149,7 +149,7 @@ header ul li:not(:last-child) a {
 .landing {
   height: calc(100vh - 64px);
   width: 100%;
-  background-image: url(/image/landing.jpg);
+  background-image: url(../image/landing.jpg);
   background-size: cover;
   position: relative;
 }
